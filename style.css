@@ -1,0 +1,19 @@
+/* Applica Lato al corpo e Playfair Display agli heading   */
+body {
+    font-family: 'Lato', sans-serif;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Background static per la Hero section */
+.hero-bg {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
