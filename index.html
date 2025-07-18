@@ -34,8 +34,8 @@
             <h1 class="text-6xl font-extrabold text-white">Salvatore Cozzolino</h1>
             <p class="text-lg text-gray-300 mt-4">Esperto in sviluppo web & soluzioni digitali personalizzate</p>
             <div class="mt-6">
-                <a href="mailto:salvatorecozzolino.dev@gmail.com"
-                    class="inline-block mx-auto w-11/12 sm:w-3/4 md:w-auto md:max-w-xs px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:-translate-y-1 flex items-center justify-center">
+                <a href="#contatti"
+                    class="portfolio-btn bg-blue-600 hover:bg-blue-700 w-full sm:w-auto py-3 text-lg rounded-full font-bold tracking-wide transition">
                     Contattami
                 </a>
             </div>
@@ -261,24 +261,31 @@
 
 
     <!-- Contatti -->
-    <section id="contatti" class="py-20 max-w-6xl mx-auto text-center px-4">
+    <!-- Contatti -->
+    <section id="contatti" class="py-20 max-w-6xl mx-auto text-center px-4 fade-in-section">
         <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Contattami</h2>
-        <p class="text-gray-400 mt-3 text-lg">Hai un progetto in mente? Scrivimi e realizziamolo insieme.</p>
-        <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-8">
-            <a href="https://wa.me/+393517526552"
-                class="inline-block w-11/12 sm:w-3/4 md:w-auto px-4 py-2 md:px-6 md:py-3 bg-green-500 hover:bg-green-600 text-white text-base md:text-lg font-semibold rounded-lg shadow-lg transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                WhatsApp
-            </a>
-            <a href="mailto:salvatorecozzolino.dev@gmail.com"
-                class="inline-block w-11/12 sm:w-3/4 md:w-auto px-4 py-2 md:px-6 md:py-3 bg-blue-500 hover:bg-blue-600 text-white text-base md:text-lg font-semibold rounded-lg shadow-lg transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                Email
-            </a>
-            <a href="https://linkedin.com/in/salvatore-cozzolino"
-                class="inline-block w-11/12 sm:w-3/4 md:w-auto px-4 py-2 md:px-6 md:py-3 bg-indigo-500 hover:bg-indigo-600 text-white text-base md:text-lg font-semibold rounded-lg shadow-lg transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                LinkedIn
-            </a>
-        </div>
+        <p class="text-gray-400 mt-3 text-lg max-w-2xl mx-auto mb-10">
+            Hai un progetto in mente? Compila il modulo e riceverai una risposta entro 24 ore!
+        </p>
+        <form action="https://formspree.io/f/xzzvzkep" method="POST"
+            class="max-w-xl mx-auto bg-white/10 p-8 rounded-2xl shadow-lg flex flex-col gap-6" id="contact-form"
+            autocomplete="off">
+            <input type="text" name="name" placeholder="Il tuo nome" required
+                class="rounded-lg p-3 text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                autocomplete="name" />
+            <input type="email" name="email" placeholder="La tua email" required
+                class="rounded-lg p-3 text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                autocomplete="email" />
+            <textarea name="message" placeholder="Scrivi qui il tuo messaggio..." required rows="5"
+                class="rounded-lg p-3 text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            <button type="submit"
+                class="portfolio-btn bg-blue-600 hover:bg-blue-700 w-full py-3 text-lg rounded-lg font-bold tracking-wide transition">
+                Invia Messaggio
+            </button>
+            <p id="form-status" class="mt-2 text-center text-green-400 font-semibold hidden"></p>
+        </form>
     </section>
+
 
     <!-- Footer -->
     <footer class="text-center py-8 bg-gray-950 text-gray-400 text-lg px-4">
