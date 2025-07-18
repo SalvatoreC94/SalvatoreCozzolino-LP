@@ -11,10 +11,12 @@ h4 {
     letter-spacing: -.02em;
 }
 
-.hero-bg {
+/* .hero-bg {
     background: linear-gradient(120deg, #0f172a 60%, #172554 100%);
-    /* Puoi aggiungere anche un pattern o una texture soft */
-}
+    /* Puoi aggiungere anche un pattern o una texture soft 
+    
+    */
+
 
 /* Hero Section + padding ridotto */
 .hero-bg {
@@ -25,6 +27,14 @@ h4 {
     align-items: center;
     justify-content: center;
     background-size: cover;
+}
+
+.hero-bg {
+    background:
+        url("https://www.transparenttextures.com/patterns/fabric-of-squares.png"),
+        linear-gradient(120deg, #0f172a 60%, #172554 100%);
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
 }
 
 .hero-bg h1 {
