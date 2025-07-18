@@ -1,19 +1,264 @@
-/* Applica Lato al corpo e Playfair Display agli heading   */
+/* ====== Tipografia globale ====== */
 body {
-    font-family: 'Lato', sans-serif;
-    transition: background-color 1s ease, color 1s ease;
+    font-family: 'Lato', Arial, sans-serif;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
     font-family: 'Playfair Display', serif;
+    letter-spacing: -.02em;
 }
 
-/* Background static per la Hero section */
 .hero-bg {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: linear-gradient(120deg, #0f172a 60%, #172554 100%);
+    /* Puoi aggiungere anche un pattern o una texture soft */
+}
+
+/* Hero Section + padding ridotto */
+.hero-bg {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.hero-bg h1 {
+    font-size: 2.8rem;
+}
+
+@media (min-width: 640px) {
+    .hero-bg h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-bg h1 {
+        font-size: 4.2rem;
+    }
+}
+
+.hero-bg p {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+}
+
+.hero-bg .fade-in {
+    animation: fadeIn 1.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== Card Processo di lavoro ====== */
+.bg-gray-800 {
+    background: rgba(30, 41, 59, 0.95);
+    border: 1.5px solid #334155;
+    box-shadow: 0 4px 24px 0 rgba(30, 41, 59, .15), 0 1.5px 0 0 #2563eb22;
+    backdrop-filter: blur(2px);
+    transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
+}
+
+.bg-gray-800:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 10px 32px 0 #2563eb33, 0 3px 0 0 #3b82f622;
+    background: rgba(51, 65, 85, 0.99);
+    transform: scale(1.05) translateY(-6px);
+}
+
+/* ====== Card Icon Fix ====== */
+.bg-gray-800 i {
+    filter: drop-shadow(0 1px 6px #0002);
+}
+
+/* ====== Sezione Chi sono - miglior leggibilità ====== */
+.text-gray-700 {
+    color: #e5e7eb !important;
+    /* testo più chiaro su fondo scuro */
+}
+
+section h2 {
+    letter-spacing: -.015em;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6 40%, #818cf8 100%);
+    margin: 0.8rem auto 0;
+    border-radius: 999px;
+}
+
+/* ====== Tecnologie - effetto immagine ====== */
+section img {
+    background: rgba(24, 24, 40, 0.6);
+    padding: .5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px 0 rgba(40, 50, 60, .10);
+    border: 1.5px solid #33415533;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+section img:hover {
+    box-shadow: 0 6px 24px 0 #3b82f633, 0 2px 0 0 #3b82f611;
+    transform: scale(1.12) translateY(-4px);
+}
+
+/* ====== Pulsanti - uniformità e transizioni ====== */
+a.inline-block,
+.shadow-lg {
+    box-shadow: 0 3px 20px 0 rgba(30, 41, 59, .13), 0 1.5px 0 0 #2563eb22;
+}
+
+a.inline-block:focus {
+    outline: 2px solid #818cf8;
+    outline-offset: 2px;
+}
+
+/* ====== Footer ====== */
+footer {
+    background: #090e19;
+    color: #a1a1aa;
+    border-top: 1px solid #33415555;
+    font-size: 1.08rem;
+    letter-spacing: 0.02em;
+}
+
+/* ====== Responsive padding e spacing ====== */
+@media (max-width: 768px) {
+    section {
+        padding-top: 3.2rem !important;
+        padding-bottom: 3.2rem !important;
+    }
+
+    .hero-bg {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
+}
+
+.techicon-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.techicon-label {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.16s, transform 0.16s;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translate(-50%, 120%);
+    background: #22223b;
+    color: #fff;
+    padding: 0.18rem 0.85rem;
+    font-size: 1rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 12px #0a0a1c44;
+    white-space: nowrap;
+    z-index: 10;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.techicon-tooltip:hover .techicon-label,
+.techicon-tooltip:focus-within .techicon-label {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 100%);
+}
+
+.techicon {
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.techicon-tooltip:hover .techicon,
+.techicon-tooltip:focus-within .techicon {
+    transform: scale(1.13) rotate(-6deg);
+    box-shadow: 0 8px 22px #3b82f644;
+}
+
+/* Responsive: Tooltip sopra per evitare overflow mobile */
+@media (max-width: 700px) {
+    .techicon-label {
+        font-size: 0.95rem;
+        bottom: auto;
+        top: 102%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.portfolio-card {
+    background: rgba(30, 41, 59, 0.97);
+    border: 1.5px solid #334155;
+    box-shadow: 0 4px 20px #0002;
+    transition: box-shadow 0.25s, transform 0.2s, border 0.2s;
+    position: relative;
+}
+
+.portfolio-card:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 10px 36px #2563eb22;
+    z-index: 2;
+}
+
+.project-img {
+    transition: transform .18s, box-shadow .18s;
+}
+
+.portfolio-card:hover .project-img {
+    transform: scale(1.045) rotate(-1.5deg);
+    box-shadow: 0 8px 24px #3b82f655;
+}
+
+.portfolio-tag {
+    display: inline-block;
+    background: linear-gradient(90deg, #2563eb 50%, #38bdf8 100%);
+    color: #fff;
+    font-size: .88rem;
+    font-weight: 700;
+    padding: 0.18rem 0.8rem;
+    border-radius: 99px;
+    letter-spacing: .03em;
+    box-shadow: 0 2px 8px #1e293b20;
+    margin-bottom: 0.15rem;
+    opacity: 0.93;
+}
+
+.portfolio-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #2563eb 40%, #1e40af 100%);
+    color: #fff;
+    padding: 0.55rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 3px 16px #2563eb22;
+    transition: background .16s, box-shadow .18s, transform .12s;
+    font-size: 1rem;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+    background: linear-gradient(90deg, #3b82f6 20%, #2563eb 100%);
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 6px 28px #2563eb44;
 }

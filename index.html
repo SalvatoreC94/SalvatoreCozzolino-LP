@@ -16,11 +16,20 @@
         rel="stylesheet" />
     <!-- Stili personalizzati -->
     <link rel="stylesheet" href="style.css">
+    <!-- Meta SEO -->
+    <meta name="description"
+        content="Salvatore Cozzolino, web developer specializzato in soluzioni digitali personalizzate. Scopri i miei lavori e contattami.">
+    <meta name="keywords" content="Web developer, HTML, CSS, JavaScript, Laravel, Vue.js, Freelance, Siti Web">
+    <meta name="author" content="Salvatore Cozzolino">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body class="text-gray-100 bg-gray-900">
     <!-- Hero Section-->
-    <section class="hero-bg relative text-center py-32 px-4">
+    <section class="hero-bg relative text-center py-32 px-4 fade-in">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-6xl font-extrabold text-white">Salvatore Cozzolino</h1>
             <p class="text-lg text-gray-300 mt-4">Esperto in sviluppo web & soluzioni digitali personalizzate</p>
@@ -89,6 +98,66 @@
         </div>
     </section>
 
+    <!-- Progetti -->
+     <section class="py-20 max-w-6xl mx-auto text-center px-4 fade-in-section" id="portfolio">
+        <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Portfolio</h2>
+        <p class="text-gray-400 mt-3 text-lg max-w-2xl mx-auto">
+            Una selezione dei miei ultimi progetti. Ogni lavoro nasce da un mix di creatività, attenzione al dettaglio e
+            soluzioni su misura.
+        </p>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Progetto 1 -->
+            <div
+                class="portfolio-card bg-gray-800 rounded-xl p-6 shadow-xl flex flex-col items-center transition hover:scale-[1.025] hover:shadow-2xl">
+                <img src="https://placehold.co/320x180/3b82f6/fff?text=Landing+Page" alt="Landing Page Demo"
+                    class="rounded-lg mb-5 shadow-lg project-img">
+                <h3 class="text-xl text-white font-semibold mb-2">Landing Page Aziendale</h3>
+                <div class="flex gap-2 justify-center mb-2">
+                    <span class="portfolio-tag">HTML5</span>
+                    <span class="portfolio-tag">Tailwind</span>
+                    <span class="portfolio-tag">JS</span>
+                </div>
+                <p class="text-gray-300 text-base mb-4">
+                    Sviluppo di una landing page responsive per un’azienda B2B, ottimizzata SEO e con animazioni fluide.
+                </p>
+                <a href="#" target="_blank" class="portfolio-btn">Visualizza Demo</a>
+            </div>
+            <!-- Progetto 2 -->
+            <div
+                class="portfolio-card bg-gray-800 rounded-xl p-6 shadow-xl flex flex-col items-center transition hover:scale-[1.025] hover:shadow-2xl">
+                <img src="https://placehold.co/320x180/10b981/fff?text=E-commerce" alt="E-commerce Demo"
+                    class="rounded-lg mb-5 shadow-lg project-img">
+                <h3 class="text-xl text-white font-semibold mb-2">E-commerce Artigianale</h3>
+                <div class="flex gap-2 justify-center mb-2">
+                    <span class="portfolio-tag">Laravel</span>
+                    <span class="portfolio-tag">Vue.js</span>
+                    <span class="portfolio-tag">MySQL</span>
+                </div>
+                <p class="text-gray-300 text-base mb-4">
+                    Shop online per prodotti artigianali: gestione catalogo, pagamenti, pannello admin personalizzato.
+                </p>
+                <a href="#" target="_blank" class="portfolio-btn">Guarda il Progetto</a>
+            </div>
+            <!-- Progetto 3 -->
+            <div
+                class="portfolio-card bg-gray-800 rounded-xl p-6 shadow-xl flex flex-col items-center transition hover:scale-[1.025] hover:shadow-2xl">
+                <img src="https://placehold.co/320x180/6366f1/fff?text=App+To-Do" alt="To-Do App Demo"
+                    class="rounded-lg mb-5 shadow-lg project-img">
+                <h3 class="text-xl text-white font-semibold mb-2">To-Do App</h3>
+                <div class="flex gap-2 justify-center mb-2">
+                    <span class="portfolio-tag">Vue.js</span>
+                    <span class="portfolio-tag">LocalStorage</span>
+                </div>
+                <p class="text-gray-300 text-base mb-4">
+                    App semplice per la gestione delle attività quotidiane, salva dati localmente e interfaccia
+                    user-friendly.
+                </p>
+                <a href="#" target="_blank" class="portfolio-btn">Scopri di più</a>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Tecnologie Utilizzate -->
     <section class="py-20 max-w-6xl mx-auto text-center px-4">
         <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Tecnologie Utilizzate
@@ -98,26 +167,54 @@
         </p>
         <div
             class="mt-12 grid grid-cols-3 gap-4 justify-items-center md:flex md:flex-wrap md:justify-center md:gap-8 px-4">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-                class="w-16 hover:scale-110 transition">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
-                class="w-16 hover:scale-110 transition">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                alt="Bootstrap" class="w-16 hover:scale-110 transition">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="JavaScript" class="w-16 hover:scale-110 transition">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"
-                class="w-16 hover:scale-110 transition">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
-                class="w-16 hover:scale-110 transition">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
-                class="w-16 hover:scale-110 transition">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
-                class="w-16 hover:scale-110 transition">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
-                class="w-16 hover:scale-110 transition">
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                    class="w-16 techicon" />
+                <span class="techicon-label">HTML5</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                    class="w-16 techicon" />
+                <span class="techicon-label">CSS3</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                    alt="Bootstrap" class="w-16 techicon" />
+                <span class="techicon-label">Bootstrap</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript" class="w-16 techicon" />
+                <span class="techicon-label">JavaScript</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"
+                    class="w-16 techicon" />
+                <span class="techicon-label">Vue.js</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+                    class="w-16 techicon" />
+                <span class="techicon-label">PHP</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
+                    class="w-16 techicon" />
+                <span class="techicon-label">Laravel</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                    class="w-16 techicon" />
+                <span class="techicon-label">MySQL</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                    class="w-16 techicon" />
+                <span class="techicon-label">Java</span>
+            </div>
         </div>
     </section>
+
 
     <!-- Contatti -->
     <section id="contatti" class="py-20 max-w-6xl mx-auto text-center px-4">
