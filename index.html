@@ -97,65 +97,97 @@
             </div>
         </div>
     </section>
-
-    <!-- Progetti -->
-     <section class="py-20 max-w-6xl mx-auto text-center px-4 fade-in-section" id="portfolio">
-        <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Portfolio</h2>
+    <!-- Portfolio -->
+    <section class="py-20 max-w-6xl mx-auto text-center px-4 fade-in-section" id="portfolio">
+        <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">
+            <i class="fas fa-folder-open mr-2 text-blue-400"></i>Portfolio
+        </h2>
         <p class="text-gray-400 mt-3 text-lg max-w-2xl mx-auto">
-            Una selezione dei miei ultimi progetti. Ogni lavoro nasce da un mix di creatività, attenzione al dettaglio e
-            soluzioni su misura.
+            Ecco alcuni progetti che rappresentano il mio stile e le mie competenze nello sviluppo di soluzioni digitali
+            su
+            misura.
         </p>
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <!-- Progetto 1 -->
+        <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Deliveboo -->
             <div
-                class="portfolio-card bg-gray-800 rounded-xl p-6 shadow-xl flex flex-col items-center transition hover:scale-[1.025] hover:shadow-2xl">
-                <img src="https://placehold.co/320x180/3b82f6/fff?text=Landing+Page" alt="Landing Page Demo"
-                    class="rounded-lg mb-5 shadow-lg project-img">
-                <h3 class="text-xl text-white font-semibold mb-2">Landing Page Aziendale</h3>
-                <div class="flex gap-2 justify-center mb-2">
-                    <span class="portfolio-tag">HTML5</span>
-                    <span class="portfolio-tag">Tailwind</span>
-                    <span class="portfolio-tag">JS</span>
+                class="portfolio-card bg-white/5 backdrop-blur-xl border border-blue-600/10 rounded-2xl p-7 shadow-2xl flex flex-col items-center relative transition hover:scale-[1.03] hover:shadow-blue-600/30 hover:border-blue-400/50 fade-in-section">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="fas fa-utensils text-xl text-blue-400"></i>
+                    <h3 class="text-xl text-white font-semibold tracking-tight">DeliveBoo</h3>
                 </div>
-                <p class="text-gray-300 text-base mb-4">
-                    Sviluppo di una landing page responsive per un’azienda B2B, ottimizzata SEO e con animazioni fluide.
+                <img src="/img/Deliveboo.png" alt="Deliveboo"
+                    class="portfolio-img rounded-lg mb-5 shadow-lg project-img ring-2 ring-blue-500/30 transition hover:ring-blue-400 object-cover w-full aspect-[16/9] "
+                    data-lightbox="portfolio">
+                <div class="flex flex-wrap gap-2 justify-center mb-3">
+                    <span class="portfolio-tag bg-gradient-to-r from-red-500 to-yellow-400">Laravel</span>
+                    <span class="portfolio-tag bg-gradient-to-r from-green-400 to-blue-500">Vue.js</span>
+                    <span
+                        class="portfolio-tag bg-gradient-to-r from-yellow-700 to-yellow-400 text-gray-900">MySQL</span>
+                </div>
+                <p class="text-gray-200 text-base mb-5 leading-relaxed">
+                    App gestionale per ristoranti con ordini online, dashboard amministrativa e interfaccia responsive.
                 </p>
-                <a href="#" target="_blank" class="portfolio-btn">Visualizza Demo</a>
+                <div class="flex gap-3">
+                    <a href="https://github.com/SalvatoreC94/DeliveBoo" target="_blank"
+                        class="portfolio-btn bg-blue-600 hover:bg-blue-700">Vai al progetto</a>
+                </div>
             </div>
-            <!-- Progetto 2 -->
+
+            <!-- Piano Editoriale Social -->
             <div
-                class="portfolio-card bg-gray-800 rounded-xl p-6 shadow-xl flex flex-col items-center transition hover:scale-[1.025] hover:shadow-2xl">
-                <img src="https://placehold.co/320x180/10b981/fff?text=E-commerce" alt="E-commerce Demo"
-                    class="rounded-lg mb-5 shadow-lg project-img">
-                <h3 class="text-xl text-white font-semibold mb-2">E-commerce Artigianale</h3>
-                <div class="flex gap-2 justify-center mb-2">
-                    <span class="portfolio-tag">Laravel</span>
-                    <span class="portfolio-tag">Vue.js</span>
-                    <span class="portfolio-tag">MySQL</span>
+                class="portfolio-card bg-white/5 backdrop-blur-xl border border-pink-600/10 rounded-2xl p-7 shadow-2xl flex flex-col items-center relative transition hover:scale-[1.03] hover:shadow-pink-600/30 hover:border-pink-400/50 fade-in-section">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="fas fa-calendar-alt text-xl text-pink-400"></i>
+                    <h3 class="text-xl text-white font-semibold tracking-tight">Piano Editoriale Social</h3>
                 </div>
-                <p class="text-gray-300 text-base mb-4">
-                    Shop online per prodotti artigianali: gestione catalogo, pagamenti, pannello admin personalizzato.
+                <img src="img/Piano-editoriale.png" alt="Piano Editoriale Social"
+                    class="portfolio-img rounded-lg mb-5 shadow-lg project-img ring-2 ring-pink-500/30 transition hover:ring-pink-400 object-cover w-full aspect-[16/9] "
+                    data-lightbox="portfolio">
+                <div class="flex flex-wrap gap-2 justify-center mb-3">
+                    <span class="portfolio-tag bg-gradient-to-r from-purple-400 to-pink-500">Vue.js</span>
+                    <span class="portfolio-tag bg-gradient-to-r from-blue-400 to-blue-700">Tailwind</span>
+                    <span
+                        class="portfolio-tag bg-gradient-to-r from-gray-400 to-gray-600 text-gray-900">LocalStorage</span>
+                </div>
+                <p class="text-gray-200 text-base mb-5 leading-relaxed">
+                    Tool per la pianificazione dei contenuti social con salvataggio locale e filtri avanzati.
                 </p>
-                <a href="#" target="_blank" class="portfolio-btn">Guarda il Progetto</a>
+                <div class="flex gap-3">
+                    <a href="https://github.com/SalvatoreC94/piano-editoriale-social" target="_blank"
+                        class="portfolio-btn bg-pink-600 hover:bg-pink-700">Vai al progetto</a>
+                </div>
             </div>
-            <!-- Progetto 3 -->
+
+            <!-- Noleggio Veicoli -->
             <div
-                class="portfolio-card bg-gray-800 rounded-xl p-6 shadow-xl flex flex-col items-center transition hover:scale-[1.025] hover:shadow-2xl">
-                <img src="https://placehold.co/320x180/6366f1/fff?text=App+To-Do" alt="To-Do App Demo"
-                    class="rounded-lg mb-5 shadow-lg project-img">
-                <h3 class="text-xl text-white font-semibold mb-2">To-Do App</h3>
-                <div class="flex gap-2 justify-center mb-2">
-                    <span class="portfolio-tag">Vue.js</span>
-                    <span class="portfolio-tag">LocalStorage</span>
+                class="portfolio-card bg-white/5 backdrop-blur-xl border border-indigo-600/10 rounded-2xl p-7 shadow-2xl flex flex-col items-center relative transition hover:scale-[1.03] hover:shadow-indigo-600/30 hover:border-indigo-400/50 fade-in-section">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="fas fa-car text-xl text-indigo-400"></i>
+                    <h3 class="text-xl text-white font-semibold tracking-tight">Noleggio Veicoli</h3>
                 </div>
-                <p class="text-gray-300 text-base mb-4">
-                    App semplice per la gestione delle attività quotidiane, salva dati localmente e interfaccia
-                    user-friendly.
+                <img src="/img/Gestionale-veicoli.png" alt="Noleggio Veicoli"
+                    class="portfolio-img rounded-lg mb-5 shadow-lg project-img ring-2 ring-indigo-500/30 transition hover:ring-indigo-400 object-cover w-full aspect-[16/9] "
+                    data-lightbox="portfolio">
+                <div class="flex flex-wrap gap-2 justify-center mb-3">
+                    <span class="portfolio-tag bg-gradient-to-r from-red-500 to-orange-400">Java</span>
+                    <span class="portfolio-tag bg-gradient-to-r from-blue-500 to-indigo-500">SQL</span>
+                </div>
+                <p class="text-gray-200 text-base mb-5 leading-relaxed">
+                    Gestionale desktop per autonoleggio, sviluppato in Java con database SQL: anagrafiche, prenotazioni,
+                    storico
+                    veicoli.
                 </p>
-                <a href="#" target="_blank" class="portfolio-btn">Scopri di più</a>
+                <div class="flex gap-3">
+                    <a href="https://github.com/SalvatoreC94/noleggio-veicoli" target="_blank"
+                        class="portfolio-btn bg-indigo-600 hover:bg-indigo-700">Vai al progetto</a>
+                </div>
             </div>
+
+
         </div>
     </section>
+
 
 
     <!-- Tecnologie Utilizzate -->
@@ -183,9 +215,20 @@
                 <span class="techicon-label">Bootstrap</span>
             </div>
             <div class="techicon-tooltip group">
+                <!-- Icona Tailwind ufficiale SVG -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                    alt="Tailwind CSS" class="w-16 techicon" />
+                <span class="techicon-label">Tailwind CSS</span>
+            </div>
+            <div class="techicon-tooltip group">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                     alt="JavaScript" class="w-16 techicon" />
                 <span class="techicon-label">JavaScript</span>
+            </div>
+            <div class="techicon-tooltip group">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                    class="w-16 techicon" />
+                <span class="techicon-label">React</span>
             </div>
             <div class="techicon-tooltip group">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"
@@ -213,6 +256,7 @@
                 <span class="techicon-label">Java</span>
             </div>
         </div>
+
     </section>
 
 
