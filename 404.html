@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>404 | Dev Runner!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: #e0e7ef;
+            color: #222;
+        }
+
+        #game-container {
+            background: #f3f6fa;
+            border-radius: 24px;
+            width: 700px;
+            height: 320px;
+            margin: 0 auto;
+            margin-top: 42px;
+            box-shadow: 0 12px 48px #b2b2c644;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #b8b8b8;
+        }
+
+        #bg-office {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        #dev {
+            position: absolute;
+            left: 60px;
+            /* posizionato a 0px dal “pavimento” */
+            bottom: 16px;
+            width: 88px;
+            height: 88px;
+            transition: bottom 0.08s;
+            z-index: 2;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .jump {
+            animation: jump 480ms cubic-bezier(.7, -0.1, .86, 1.2);
+        }
+
+        @keyframes jump {
+            0% {
+                bottom: 16px;
+            }
+
+            30% {
+                bottom: 170px;
+            }
+
+            60% {
+                bottom: 170px;
+            }
+
+            100% {
+                bottom: 16px;
+            }
+        }
+
+        #bug {
+            width: 56px;
+            height: 38px;
+            position: absolute;
+            bottom: 18px;
+            left: 100%;
+            z-index: 3;
+            transition: filter 0.12s;
+            filter: drop-shadow(0 3px 2px #2224);
+            user-select: none;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #bug img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #score {
+            position: absolute;
+            top: 12px;
+            left: 22px;
+            color: #fbbf24;
+            font-weight: bold;
+            font-size: 1.17rem;
+            text-shadow: 0 2px 6px #0f172a;
+            letter-spacing: .04em;
+            z-index: 10;
+        }
+
+        #game-over {
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 37%;
+            text-align: center;
+            color: #222;
+            font-size: 1.35rem;
+            text-shadow: 0 2px 10px #fff9;
+            background: rgba(240, 240, 255, 0.97);
+            border-radius: 16px;
+            padding: 22px 0;
+            left: 0;
+            z-index: 20;
+        }
+
+        @media (max-width: 900px) {
+            #game-container {
+                width: 99vw;
+            }
+
+            #bg-office {
+                width: 100vw;
+            }
+        }
+
+        @media (max-width: 500px) {
+            #game-container {
+                min-height: 140px;
+                max-height: 210px;
+            }
+
+            #dev {
+                width: 48px;
+                height: 48px;
+            }
+
+            #bug {
+                width: 24px;
+                height: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center min-h-screen justify-center pt-4 bg-gradient-to-b from-blue-50 to-blue-200">
+    <h1 class="text-5xl font-extrabold text-blue-500 mb-2">404</h1>
+    <p class="mb-2 text-lg text-gray-600">Oops! Pagina non trovata.<br>Ma puoi divertirti un po' con <span
+            class="text-yellow-500 font-bold">Dev Runner</span>!</p>
+    <div id="game-container" tabindex="0">
+        <img src="img/bg-office.png" id="bg-office" alt="sfondo ufficio di giorno" />
+        <span id="score">Score: 0</span>
+        <img id="dev" src="img/dev-runner.png" alt="Developer avatar">
+        <div id="bug"><img src="img/bug.png" alt="bug pixel art"></div>
+        <div id="game-over">
+            <div class="mb-2 font-bold text-xl text-yellow-500">Game Over!</div>
+            <div id="final-score"></div>
+            <button onclick="restartGame()"
+                class="mt-4 px-5 py-2 bg-blue-600 rounded-full hover:bg-blue-700 transition text-white">Riprova</button>
+            <a href="/" class="block mt-3 text-blue-500 underline hover:text-yellow-500">Torna al sito</a>
+        </div>
+    </div>
+    <p class="mt-6 text-sm text-gray-500 italic">Premi <b>spazio</b> o clicca il box per saltare i bug. Quanti ne
+        schivi?</p>
+    <script>
+        const dev = document.getElementById('dev');
+        const bug = document.getElementById('bug');
+        const gameContainer = document.getElementById('game-container');
+        const scoreEl = document.getElementById('score');
+        const gameOverEl = document.getElementById('game-over');
+        const finalScoreEl = document.getElementById('final-score');
+        let jumping = false, gameOn = true, score = 0;
+
+        // Parametri movimento bug
+        let bugSpeed = 2.0;
+        const bugMinSpeed = 0.85;
+        const bugAccel = 0.06;
+
+
+        let bugX, containerWidth;
+
+        function placeBug() {
+            containerWidth = gameContainer.clientWidth;
+            bugX = containerWidth;
+            bug.style.left = bugX + "px";
+        }
+        function moveBug() {
+            if (!gameOn) return;
+            bugX -= containerWidth / (bugSpeed * 60); // frame rate base 60fps
+            if (bugX < -40) { // bug fuori schermo a sinistra
+                score++;
+                scoreEl.textContent = "Score: " + score;
+                // Aumenta la velocità gradualmente (fino a un limite)
+                bugSpeed = Math.max(bugMinSpeed, 2.0 - score * bugAccel);
+                placeBug();
+            } else {
+                bug.style.left = bugX + "px";
+            }
+        }
+
+        function bugLoop() {
+            moveBug();
+            if (gameOn) requestAnimationFrame(bugLoop);
+        }
+
+        // Salto dev
+        function jump() {
+            if (jumping) return;
+            jumping = true;
+            dev.classList.add('jump');
+            setTimeout(() => {
+                dev.classList.remove('jump');
+                jumping = false;
+            }, 480);
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && gameOn) {
+                jump();
+            }
+            if (e.code === 'Space' && !gameOn) {
+                restartGame();
+            }
+        });
+        gameContainer.addEventListener('click', () => {
+            if (gameOn) jump();
+        });
+
+        // Collision detection migliorata
+        function checkCollision() {
+            let devRect = dev.getBoundingClientRect();
+            let bugRect = bug.getBoundingClientRect();
+            let gameRect = gameContainer.getBoundingClientRect();
+            // collisione: se bug è davanti al dev e dev è basso
+            if (
+                bugRect.right - 18 < devRect.right &&
+                bugRect.right - 18 > devRect.left &&
+                devRect.bottom > gameRect.bottom - 44 // dev è basso (non salta abbastanza)
+            ) {
+                return true;
+            }
+            return false;
+        }
+        // Main game loop
+        let collisionCheck = setInterval(() => {
+            if (!gameOn) return;
+            if (checkCollision()) {
+                gameOn = false;
+                gameOverEl.style.display = "block";
+                finalScoreEl.textContent = "Bug evitati: " + score;
+            }
+        }, 28);
+
+        function restartGame() {
+            score = 0;
+            scoreEl.textContent = "Score: 0";
+            bugSpeed = 2.0;
+            placeBug();
+            gameOn = true;
+            gameOverEl.style.display = "none";
+            requestAnimationFrame(bugLoop);
+        }
+
+        // Avvia il gioco
+        placeBug();
+        requestAnimationFrame(bugLoop);
+    </script>
+</body>
+
+</html>
