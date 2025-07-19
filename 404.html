@@ -3,8 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>404 | Dev Runner!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Salvatore Cozzolino | Dev Runner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="404 - Pagina non trovata su SalvatoreCozzolino.com. Divertiti con Dev Runner mentre cerchi la pagina giusta! Salvatore Cozzolino, freelance web developer e digital creator.">
+    <meta name="keywords"
+        content="Salvatore Cozzolino, developer, web developer, freelance, siti web, 404, dev runner, digital, portfolio, coding">
+    <meta name="author" content="Salvatore Cozzolino">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:title" content="404 | Salvatore Cozzolino | Dev Runner">
+    <meta property="og:description"
+        content="404 - Pagina non trovata. Ma puoi giocare a Dev Runner sul sito di Salvatore Cozzolino, freelance web developer!">
+    <meta property="og:image" content="https://salvatorecozzolino.com/img/bg-office.png">
+    <meta property="og:url" content="https://salvatorecozzolino.com/404.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://salvatorecozzolino.com/404.html">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -23,6 +37,7 @@
             position: relative;
             overflow: hidden;
             border: 3px solid #b8b8b8;
+            touch-action: manipulation;
         }
 
         #bg-office {
@@ -40,7 +55,6 @@
         #dev {
             position: absolute;
             left: 60px;
-            /* posizionato a 0px dal “pavimento” */
             bottom: 16px;
             width: 88px;
             height: 88px;
@@ -120,32 +134,76 @@
             padding: 22px 0;
             left: 0;
             z-index: 20;
+            box-sizing: border-box;
+            max-height: 64%;
+            overflow-y: auto;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 700px) {
             #game-container {
-                width: 99vw;
+                width: 97vw;
+                min-width: 0;
+                max-width: 100vw;
+                height: 56vw;
+                min-height: 180px;
+                max-height: 340px;
+                margin-top: 18px;
             }
 
             #bg-office {
-                width: 100vw;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: contain;
             }
         }
 
         @media (max-width: 500px) {
             #game-container {
-                min-height: 140px;
-                max-height: 210px;
+                height: 68vw;
+                min-height: 145px;
+                max-height: 215px;
+                margin-top: 10px;
+                padding: 0;
             }
 
             #dev {
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                left: 18px;
+                bottom: 8px;
             }
 
             #bug {
-                width: 24px;
-                height: 16px;
+                width: 28px;
+                height: 18px;
+                bottom: 10px;
+            }
+
+            #score {
+                font-size: 1rem;
+                left: 11px;
+                top: 6px;
+            }
+
+            h1 {
+                font-size: 2.1rem;
+            }
+
+            .mb-2,
+            .text-lg {
+                font-size: 1rem !important;
+            }
+
+            .mt-6 {
+                font-size: 0.93rem !important;
+            }
+
+            #game-over {
+                font-size: 0.98rem;
+                padding: 10px 0 4px 0;
+                top: 30%;
+                max-height: 60%;
+                border-radius: 9px;
             }
         }
     </style>
@@ -168,8 +226,8 @@
             <a href="/" class="block mt-3 text-blue-500 underline hover:text-yellow-500">Torna al sito</a>
         </div>
     </div>
-    <p class="mt-6 text-sm text-gray-500 italic">Premi <b>spazio</b> o clicca il box per saltare i bug. Quanti ne
-        schivi?</p>
+    <p class="mt-6 text-sm text-gray-500 italic">Premi <b>spazio</b> o <b>tocca</b> la zona di gioco per saltare i bug.
+        Quanti ne schivi?</p>
     <script>
         const dev = document.getElementById('dev');
         const bug = document.getElementById('bug');
@@ -180,10 +238,9 @@
         let jumping = false, gameOn = true, score = 0;
 
         // Parametri movimento bug
-        let bugSpeed = 2.0;
-        const bugMinSpeed = 0.85;
-        const bugAccel = 0.06;
-
+        let bugSpeed = 2.0; // secondi
+        const bugMinSpeed = 0.85; // più semplice dopo 10 bug
+        const bugAccel = 0.06; // curva meno aggressiva
 
         let bugX, containerWidth;
 
@@ -238,17 +295,15 @@
             let devRect = dev.getBoundingClientRect();
             let bugRect = bug.getBoundingClientRect();
             let gameRect = gameContainer.getBoundingClientRect();
-            // collisione: se bug è davanti al dev e dev è basso
             if (
                 bugRect.right - 18 < devRect.right &&
                 bugRect.right - 18 > devRect.left &&
-                devRect.bottom > gameRect.bottom - 44 // dev è basso (non salta abbastanza)
+                devRect.bottom > gameRect.bottom - 44
             ) {
                 return true;
             }
             return false;
         }
-        // Main game loop
         let collisionCheck = setInterval(() => {
             if (!gameOn) return;
             if (checkCollision()) {
@@ -268,7 +323,6 @@
             requestAnimationFrame(bugLoop);
         }
 
-        // Avvia il gioco
         placeBug();
         requestAnimationFrame(bugLoop);
     </script>
