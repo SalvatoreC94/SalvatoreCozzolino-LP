@@ -11,11 +11,6 @@ h4 {
     letter-spacing: -.02em;
 }
 
-/* .hero-bg {
-    background: linear-gradient(120deg, #0f172a 60%, #172554 100%);
-    /* Puoi aggiungere anche un pattern o una texture soft 
-    
-    */
 
 
 /* Hero Section + padding ridotto */
@@ -30,9 +25,7 @@ h4 {
 }
 
 .hero-bg {
-    background:
-        url("https://www.transparenttextures.com/patterns/fabric-of-squares.png"),
-        linear-gradient(120deg, #0f172a 60%, #172554 100%);
+
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
 }
@@ -145,9 +138,7 @@ a.inline-block:focus {
 footer {
     background: #090e19;
     color: #a1a1aa;
-    border-top: 1px solid #33415555;
-    font-size: 1.08rem;
-    letter-spacing: 0.02em;
+
 }
 
 /* ====== Responsive padding e spacing ====== */

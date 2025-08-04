@@ -72,65 +72,66 @@
 
 <body class="text-gray-100 bg-gray-900">
     <!-- Hero Section-->
-    <section class="hero-bg relative text-center py-32 px-4 fade-in">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-6xl font-extrabold text-white">Salvatore Cozzolino</h1>
-            <p class=" text-gray-300 mt-5 max-w-2xl mx-auto">
-                Web Developer Freelance.
-            </p>
-            <div class="mt-6">
-                <a href="#contatti"
-                    class="portfolio-btn bg-blue-600 hover:bg-blue-700 w-full sm:w-auto py-3 text-lg rounded-full font-bold tracking-wide transition">
-                    Contattami
-                </a>
-            </div>
+    <nav class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+        <div class="text-yellow-400 font-semibold text-lg font-sans select-none cursor-default">
+            Salvatore Cozzolino
+        </div>
+        <div class="space-x-8 text-[#8a8f9e] font-medium text-base">
+            <a href="#chi-sono" class="hover:text-yellow-400 transition">Chi sono</a>
+            <a href="#portfolio" class="hover:text-yellow-400 transition">Progetti</a>
+            <a href="#contatti" class="hover:text-yellow-400 transition">Contatti</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="hero-bg relative text-center py-32 px-4 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:flex-1 max-w-xl text-left relative z-10">
+            <h1 class="font-serif text-5xl md:text-6xl leading-tight font-bold mb-6 select-text text-[#e4ded4]">
+                Ciao, sono<br />
+                Salvatore
+            </h1>
+            <p class="text-gray-400 text-xl mb-8">Web Developer</p>
+            <button onclick="document.getElementById('contatti').scrollIntoView({behavior:'smooth'})"
+                class="bg-yellow-400 text-[#1e1e1e] font-bold px-8 py-3 rounded-md hover:bg-yellow-500 transition">
+                Contattami
+            </button>
+        </div>
+        <div class="lg:flex-1 flex justify-center relative z-10">
+            <img src="https://avatars.githubusercontent.com/u/163008512?v=4" alt="Salvatore Cozzolino"
+                class="rounded-full border-4 border-yellow-400 shadow-lg w-64 h-64 object-cover select-none" />
         </div>
     </section>
 
     <!-- Chi Sono -->
-    <section class="py-20 max-w-6xl mx-auto text-center px-4">
+    <section id="chi-sono" class="py-20 max-w-6xl mx-auto text-center px-4">
         <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Chi Sono</h2>
         <div class="mt-6 text-center md:text-left max-w-6xl mx-auto space-y-6">
             <p class="text-gray-700 text-lg leading-relaxed">
-                La mia storia inizia lontano dal mondo del codice, nelle cucine di ristoranti dove ho imparato cosa
-                significa
-                davvero lavorare con passione, dedizione e attenzione ai dettagli. Da chef, ogni piatto era una sfida:
-                capire i
-                gusti delle persone, scegliere con cura gli ingredienti, trovare il giusto equilibrio tra tecnica e
-                creatività.
+                La mia storia parte lontano dal computer, tra i fornelli di una cucina, dove ho imparato quanto contino
+                passione,
+                attenzione ai dettagli e ascolto delle persone. Questi valori mi hanno accompagnato anche quando la
+                curiosità mi ha
+                portato nel mondo dello sviluppo web.
             </p>
             <p class="text-gray-700 text-lg leading-relaxed">
-                Poi è arrivata la tecnologia. La curiosità mi ha spinto ad avvicinarmi al mondo digitale e, da lì, il
-                passo verso lo
-                sviluppo web è stato naturale. Ho iniziato come autodidatta, studiando giorno e notte, sperimentando
-                ogni linguaggio
-                e framework, costruendo i miei primi progetti da zero. Ho scoperto che, come in cucina, anche nel coding
-                la
-                differenza la fa la cura per i dettagli, la voglia di migliorarsi e la capacità di ascoltare chi si ha
-                di fronte.
+                Ho scoperto che programmare è un po’ come cucinare: serve creatività, metodo e la voglia di migliorarsi
+                ogni giorno.
+                Oggi, da freelance, metto tutto questo in ogni progetto: che sia un sito vetrina, un e-commerce o una
+                web app, il mio
+                obiettivo è sempre trasformare un’idea in una soluzione digitale concreta, bella e funzionale.
             </p>
             <p class="text-gray-700 text-lg leading-relaxed">
-                Oggi sono uno sviluppatore web freelance, metto al servizio dei miei clienti tutto ciò che ho imparato:
-                la
-                creatività, la disciplina, il problem solving e la capacità di tradurre le idee in progetti concreti e
-                funzionali.
-                Ogni lavoro è una nuova sfida: che sia un sito vetrina, una piattaforma e-commerce, una web app o un
-                gestionale,
-                affronto ogni progetto con metodo, trasparenza e spirito di collaborazione.
+                Quando non scrivo codice, mi rilasso tra libri, viaggi, stampa 3D… e ogni tanto torno ai fornelli. Credo
+                che le migliori
+                idee nascano dall’incontro tra mondi diversi e che la crescita personale sia la vera chiave di ogni
+                sfida.
             </p>
+
             <p class="text-gray-700 text-lg leading-relaxed">
-                Quando non scrivo codice, continuo a coltivare le mie passioni: la stampa 3D, i viaggi, la lettura e la
-                cucina (che
-                resta sempre il mio modo preferito di rilassarmi e condividere momenti autentici). Credo che le storie
-                migliori
-                nascano dall’incontro tra mondi diversi e che la crescita personale sia la chiave per affrontare
-                qualsiasi sfida,
-                digitale o meno.
-            </p>
-            <p class="text-gray-700 text-lg leading-relaxed">
-                Oggi sono qui per aiutare chi vuole trasformare una semplice idea in una soluzione digitale che funziona
-                davvero. Se
-                vuoi conoscere la mia storia o vuoi costruirne una nuova insieme, sono pronto a raccogliere la sfida.
+                Se vuoi trasformare la tua idea in un progetto che funziona davvero, sono qui per ascoltarti. Le storie
+                migliori si
+                costruiscono insieme.
             </p>
 
 
@@ -334,34 +335,30 @@
 
 
     <!-- Contatti -->
-    <section id="contatti" class="py-20 max-w-6xl mx-auto text-center px-4 fade-in-section">
+    <section id="contatti" class="py-20 max-w-6xl mx-auto text-center px-4">
         <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Contattami</h2>
         <p class="text-gray-400 mt-3 text-lg max-w-2xl mx-auto mb-10">
-            Hai un progetto in mente? Compila il modulo e riceverai una risposta entro 24 ore!
+            Hai un progetto? Scrivimi e ti risponderò entro 24 ore!
         </p>
         <form action="https://formspree.io/f/xzzvzkep" method="POST"
-            class="max-w-xl mx-auto bg-white/10 p-8 rounded-2xl shadow-lg flex flex-col gap-6" id="contact-form"
-            autocomplete="off">
-            <input type="text" name="name" placeholder="Il tuo nome" required
-                class="rounded-lg p-3 text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                autocomplete="name" />
-            <input type="email" name="email" placeholder="La tua email" required
-                class="rounded-lg p-3 text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                autocomplete="email" />
-            <textarea name="message" placeholder="Scrivi qui il tuo messaggio..." required rows="5"
-                class="rounded-lg p-3 text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            class="max-w-xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-lg flex flex-col gap-6" id="contact-form">
+            <input type="text" name="name" placeholder="Nome" required
+                class="rounded-lg p-3 text-gray-900 bg-gray-50" />
+            <input type="email" name="email" placeholder="Email" required
+                class="rounded-lg p-3 text-gray-900 bg-gray-50" />
+            <textarea name="message" placeholder="Messaggio" required rows="5"
+                class="rounded-lg p-3 text-gray-900 bg-gray-50"></textarea>
             <button type="submit"
-                class="portfolio-btn bg-blue-600 hover:bg-blue-700 w-full py-3 text-lg rounded-lg font-bold tracking-wide transition">
+                class="bg-yellow-400 text-gray-900 py-3 text-lg rounded-lg font-bold hover:bg-yellow-500 transition">
                 Invia Messaggio
             </button>
-            <p id="form-status" class="mt-2 text-center text-green-400 font-semibold hidden"></p>
+            <p id="form-status" class="mt-2 text-center hidden"></p>
         </form>
     </section>
 
-
     <!-- Footer -->
-    <footer class="text-center py-8 bg-gray-950 text-gray-400 text-lg px-4">
-        <div class="flex justify-center gap-5 mb-3">
+    <footer class="text-center py-4 bg-gray-950 text-gray-400 text-lg px-4">
+        <div class="flex justify-center gap-4 mb-2">
             <a href="https://www.linkedin.com/in/salvatore-cozzolino" target="_blank" rel="noopener"
                 aria-label="LinkedIn" class="text-gray-400 hover:text-blue-500 text-2xl transition"><i
                     class="fab fa-linkedin"></i></a>
