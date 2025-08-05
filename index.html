@@ -16,363 +16,245 @@
         rel="stylesheet" />
     <!-- Stili personalizzati -->
     <link rel="stylesheet" href="style.css">
-    <!-- Meta SEO -->
-    <!-- SEO -->
-    <!-- Meta SEO -->
-    <title>Salvatore Cozzolino | Freelance Web Developer | Portfolio & Soluzioni Digitali</title>
+    <!-- SEO e meta -->
     <meta name="description"
         content="Scopri il portfolio di Salvatore Cozzolino, freelance web developer specializzato in soluzioni digitali su misura, sviluppo web, automazioni e consulenza digitale per aziende e professionisti.">
     <meta name="keywords"
         content="Web developer freelance, sviluppatore web, portfolio, soluzioni digitali, Laravel, Vue.js, JavaScript, Tailwind, consulenza digitale, automazione, siti web, Salvatore Cozzolino">
     <meta name="author" content="Salvatore Cozzolino">
     <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph per social -->
-    <meta property="og:title" content="Salvatore Cozzolino | Freelance Web Developer">
-    <meta property="og:description"
-        content="Portfolio, soluzioni digitali e sviluppo web su misura. Scopri come posso aiutare il tuo business a crescere online.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://salvatorecozzolino.com/">
-    <meta property="og:image" content="https://salvatorecozzolino.com/img/preview-portfolio.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Salvatore Cozzolino | Freelance Web Developer">
-    <meta name="twitter:description" content="Portfolio, soluzioni digitali e sviluppo web su misura.">
-    <meta name="twitter:image" content="https://salvatorecozzolino.com/img/preview-portfolio.png">
-
-    <!-- Structured data Person -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Person",
-  "name": "Salvatore Cozzolino",
-  "url": "https://salvatorecozzolino.com/",
-  "jobTitle": "Freelance Web Developer",
-  "sameAs": [
-    "https://www.linkedin.com/in/salvatore-cozzolino",
-    "https://github.com/SalvatoreC94"
-  ]
-}
-</script>
-
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://salvatorecozzolino.com/">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-
-    </script>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-
-
 </head>
 
-<body class="text-gray-100 bg-gray-900">
-    <!-- Hero Section-->
-    <nav class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
-        <div class="text-yellow-400 font-semibold text-lg font-sans select-none cursor-default">
-            Salvatore Cozzolino
-        </div>
-        <div class="space-x-8 text-[#8a8f9e] font-medium text-base">
-            <a href="#chi-sono" class="hover:text-yellow-400 transition">Chi sono</a>
-            <a href="#portfolio" class="hover:text-yellow-400 transition">Progetti</a>
-            <a href="#contatti" class="hover:text-yellow-400 transition">Contatti</a>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="brand">Salvatore Cozzolino</div>
+            <div class="links">
+                <a href="#chi-sono">Chi sono</a>
+                <a href="#portfolio">Progetti</a>
+                <a href="#contatti">Contatti</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section
-        class="hero-bg relative text-center py-32 px-4 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-        <div class="lg:flex-1 max-w-xl text-left relative z-10">
-            <h1 class="font-serif text-5xl md:text-6xl leading-tight font-bold mb-6 select-text text-[#e4ded4]">
-                Ciao, sono<br />
-                Salvatore
-            </h1>
-            <p class="text-gray-400 text-xl mb-8">Web Developer</p>
-            <button onclick="document.getElementById('contatti').scrollIntoView({behavior:'smooth'})"
-                class="bg-yellow-400 text-[#1e1e1e] font-bold px-8 py-3 rounded-md hover:bg-yellow-500 transition">
-                Contattami
-            </button>
-        </div>
-        <div class="lg:flex-1 flex justify-center relative z-10">
-            <img src="https://avatars.githubusercontent.com/u/163008512?v=4" alt="Salvatore Cozzolino"
-                class="rounded-full border-4 border-yellow-400 shadow-lg w-64 h-64 object-cover select-none" />
+    <section class="hero-bg">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Ciao, sono<br>Salvatore</h1>
+                <p>Web Developer</p>
+                <button onclick="document.getElementById('contatti').scrollIntoView({behavior:'smooth'})">
+                    Contattami
+                </button>
+            </div>
+            <div class="hero-right">
+                <img src="https://avatars.githubusercontent.com/u/163008512?v=4" alt="Salvatore Cozzolino"
+                    class="profile-img" />
+            </div>
         </div>
     </section>
 
     <!-- Chi Sono -->
-    <section id="chi-sono" class="py-20 max-w-6xl mx-auto text-center px-4">
-        <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Chi Sono</h2>
-        <div class="mt-6 text-center md:text-left max-w-6xl mx-auto space-y-6">
-            <p class="text-gray-700 text-lg leading-relaxed">
+    <section id="chi-sono" class="about-section">
+        <h2>Chi Sono</h2>
+        <div class="about-content">
+            <p>
                 La mia storia parte lontano dal computer, tra i fornelli di una cucina, dove ho imparato quanto contino
-                passione,
-                attenzione ai dettagli e ascolto delle persone. Questi valori mi hanno accompagnato anche quando la
-                curiosità mi ha
-                portato nel mondo dello sviluppo web.
+                passione, attenzione ai dettagli e ascolto delle persone.
             </p>
-            <p class="text-gray-700 text-lg leading-relaxed">
+            <p>
                 Ho scoperto che programmare è un po’ come cucinare: serve creatività, metodo e la voglia di migliorarsi
-                ogni giorno.
-                Oggi, da freelance, metto tutto questo in ogni progetto: che sia un sito vetrina, un e-commerce o una
-                web app, il mio
-                obiettivo è sempre trasformare un’idea in una soluzione digitale concreta, bella e funzionale.
+                ogni giorno. Oggi, da freelance, metto tutto questo in ogni progetto.
             </p>
-            <p class="text-gray-700 text-lg leading-relaxed">
-                Quando non scrivo codice, mi rilasso tra libri, viaggi, stampa 3D… e ogni tanto torno ai fornelli. Credo
-                che le migliori
-                idee nascano dall’incontro tra mondi diversi e che la crescita personale sia la vera chiave di ogni
-                sfida.
+            <p>
+                Quando non scrivo codice, mi rilasso tra libri, viaggi, stampa 3D… e ogni tanto torno ai fornelli.
             </p>
-
-            <p class="text-gray-700 text-lg leading-relaxed">
-                Se vuoi trasformare la tua idea in un progetto che funziona davvero, sono qui per ascoltarti. Le storie
-                migliori si
-                costruiscono insieme.
+            <p>
+                Se vuoi trasformare la tua idea in un progetto che funziona davvero, sono qui per ascoltarti.
             </p>
-
-
         </div>
     </section>
 
     <!-- Processo di Lavoro -->
-    <section class="py-20 max-w-6xl mx-auto text-center px-4">
-        <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Il Mio Processo di
-            Lavoro</h2>
-        <p class="text-gray-400 mt-4 max-w-3xl mx-auto text-lg">
-            Ogni progetto segue un metodo strategico in quattro fasi per garantire risultati di alta qualità.
-        </p>
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-            <div class="p-8 bg-gray-800 rounded-lg shadow-xl transition transform hover:scale-105 hover:shadow-2xl">
-                <i class="fas fa-lightbulb text-4xl text-yellow-400"></i>
-                <h3 class="text-xl text-white mt-4">Strategia</h3>
-                <p class="text-gray-300 mt-2 text-sm">Analizzo le esigenze del cliente e definisco una strategia
-                    efficace.</p>
+    <section class="process-section">
+        <h2>Il Mio Processo di Lavoro</h2>
+        <p class="process-desc">Ogni progetto segue un metodo strategico in quattro fasi per garantire risultati di alta
+            qualità.</p>
+        <div class="process-grid">
+            <div class="process-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Strategia</h3>
+                <p>Analizzo le esigenze del cliente e definisco una strategia efficace.</p>
             </div>
-            <div class="p-8 bg-gray-800 rounded-lg shadow-xl transition transform hover:scale-105 hover:shadow-2xl">
-                <i class="fas fa-pencil-ruler text-4xl text-blue-400"></i>
-                <h3 class="text-xl text-white mt-4">Design</h3>
-                <p class="text-gray-300 mt-2 text-sm">Creo interfacce intuitive e moderne per un'esperienza utente
-                    ottimale.</p>
+            <div class="process-card">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>Design</h3>
+                <p>Creo interfacce intuitive e moderne per un'esperienza utente ottimale.</p>
             </div>
-            <div class="p-8 bg-gray-800 rounded-lg shadow-xl transition transform hover:scale-105 hover:shadow-2xl">
-                <i class="fas fa-code text-4xl text-green-400"></i>
-                <h3 class="text-xl text-white mt-4">Sviluppo</h3>
-                <p class="text-gray-300 mt-2 text-sm">Scrivo codice performante e scalabile per garantire qualità e
-                    velocità.</p>
+            <div class="process-card">
+                <i class="fas fa-code"></i>
+                <h3>Sviluppo</h3>
+                <p>Scrivo codice performante e scalabile per garantire qualità e velocità.</p>
             </div>
-            <div class="p-8 bg-gray-800 rounded-lg shadow-xl transition transform hover:scale-105 hover:shadow-2xl">
-                <i class="fas fa-rocket text-4xl text-red-400"></i>
-                <h3 class="text-xl text-white mt-4">Deploy</h3>
-                <p class="text-gray-300 mt-2 text-sm">Ottimizzo e pubblico il sito, monitorando le performance.</p>
+            <div class="process-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Deploy</h3>
+                <p>Ottimizzo e pubblico il sito, monitorando le performance.</p>
             </div>
         </div>
     </section>
-    <!-- Portfolio -->
-    <section class="py-20 max-w-6xl mx-auto text-center px-4 fade-in-section" id="portfolio">
-        <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">
-            <i class="fas fa-folder-open mr-2 text-blue-400"></i>Portfolio
-        </h2>
-        <p class="text-gray-400 mt-3 text-lg max-w-2xl mx-auto">
-            Ecco alcuni progetti che rappresentano il mio stile e le mie competenze nello sviluppo di soluzioni digitali
-            su
-            misura.
-        </p>
-        <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-            <!-- Deliveboo -->
-            <div
-                class="portfolio-card bg-white/5 backdrop-blur-xl border border-blue-600/10 rounded-2xl p-7 shadow-2xl flex flex-col items-center relative transition hover:scale-[1.03] hover:shadow-blue-600/30 hover:border-blue-400/50 fade-in-section">
-                <div class="flex items-center gap-2 mb-3">
-                    <i class="fas fa-utensils text-xl text-blue-400"></i>
-                    <h3 class="text-xl text-white font-semibold tracking-tight">DeliveBoo</h3>
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio-section">
+        <h2><i class="fas fa-folder-open"></i> Portfolio</h2>
+        <p class="portfolio-desc">Ecco alcuni progetti che rappresentano il mio stile e le mie competenze.</p>
+        <div class="portfolio-grid">
+            <!-- DeliveBoo -->
+            <div class="portfolio-card">
+                <div class="portfolio-header">
+                    <i class="fas fa-utensils"></i>
+                    <h3>DeliveBoo</h3>
                 </div>
-                <img src="/img/Deliveboo.png" alt="Deliveboo"
-                    class="portfolio-img rounded-lg mb-5 shadow-lg project-img ring-2 ring-blue-500/30 transition hover:ring-blue-400 object-cover w-full aspect-[16/9] "
-                    data-lightbox="portfolio">
-                <div class="flex flex-wrap gap-2 justify-center mb-3">
-                    <span class="portfolio-tag bg-gradient-to-r from-red-500 to-yellow-400">Laravel</span>
-                    <span class="portfolio-tag bg-gradient-to-r from-green-400 to-blue-500">Vue.js</span>
-                    <span
-                        class="portfolio-tag bg-gradient-to-r from-yellow-700 to-yellow-400 text-gray-900">MySQL</span>
+                <img src="/img/Deliveboo.png" alt="Deliveboo" class="portfolio-img" />
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag laravel">Laravel</span>
+                    <span class="portfolio-tag vue">Vue.js</span>
+                    <span class="portfolio-tag mysql">MySQL</span>
                 </div>
-                <p class="text-gray-200 text-base mb-5 leading-relaxed">
-                    App gestionale per ristoranti con ordini online, dashboard amministrativa e interfaccia responsive.
+                <p>App gestionale per ristoranti con ordini online, dashboard amministrativa e interfaccia responsive.
                 </p>
-                <div class="flex gap-3">
-                    <a href="https://github.com/SalvatoreC94/DeliveBoo" target="_blank"
-                        class="portfolio-btn bg-blue-600 hover:bg-blue-700">Vai al progetto</a>
+                <div class="portfolio-actions">
+                    <a href="https://github.com/SalvatoreC94/DeliveBoo" target="_blank" class="portfolio-btn">Vai al
+                        progetto</a>
                 </div>
             </div>
 
             <!-- Piano Editoriale Social -->
-            <div
-                class="portfolio-card bg-white/5 backdrop-blur-xl border border-pink-600/10 rounded-2xl p-7 shadow-2xl flex flex-col items-center relative transition hover:scale-[1.03] hover:shadow-pink-600/30 hover:border-pink-400/50 fade-in-section">
-                <div class="flex items-center gap-2 mb-3">
-                    <i class="fas fa-calendar-alt text-xl text-pink-400"></i>
-                    <h3 class="text-xl text-white font-semibold tracking-tight">Piano Editoriale Social</h3>
+            <div class="portfolio-card">
+                <div class="portfolio-header">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Piano Editoriale Social</h3>
                 </div>
-                <img src="img/Piano-editoriale.png" alt="Piano Editoriale Social"
-                    class="portfolio-img rounded-lg mb-5 shadow-lg project-img ring-2 ring-pink-500/30 transition hover:ring-pink-400 object-cover w-full aspect-[16/9] "
-                    data-lightbox="portfolio">
-                <div class="flex flex-wrap gap-2 justify-center mb-3">
-                    <span class="portfolio-tag bg-gradient-to-r from-purple-400 to-pink-500">Vue.js</span>
-                    <span class="portfolio-tag bg-gradient-to-r from-blue-400 to-blue-700">Tailwind</span>
-                    <span
-                        class="portfolio-tag bg-gradient-to-r from-gray-400 to-gray-600 text-gray-900">LocalStorage</span>
+                <img src="img/Piano-editoriale.png" alt="Piano Editoriale Social" class="portfolio-img" />
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag vue">Vue.js</span>
+                    <span class="portfolio-tag tailwind">Tailwind</span>
+                    <span class="portfolio-tag storage">LocalStorage</span>
                 </div>
-                <p class="text-gray-200 text-base mb-5 leading-relaxed">
-                    Tool per la pianificazione dei contenuti social con salvataggio locale e filtri avanzati.
-                </p>
-                <div class="flex gap-3">
+                <p>Tool per la pianificazione dei contenuti social con salvataggio locale e filtri avanzati.</p>
+                <div class="portfolio-actions">
                     <a href="https://github.com/SalvatoreC94/piano-editoriale-social" target="_blank"
-                        class="portfolio-btn bg-pink-600 hover:bg-pink-700">Vai al progetto</a>
+                        class="portfolio-btn">Vai al progetto</a>
                 </div>
             </div>
 
             <!-- Noleggio Veicoli -->
-            <div
-                class="portfolio-card bg-white/5 backdrop-blur-xl border border-indigo-600/10 rounded-2xl p-7 shadow-2xl flex flex-col items-center relative transition hover:scale-[1.03] hover:shadow-indigo-600/30 hover:border-indigo-400/50 fade-in-section">
-                <div class="flex items-center gap-2 mb-3">
-                    <i class="fas fa-car text-xl text-indigo-400"></i>
-                    <h3 class="text-xl text-white font-semibold tracking-tight">Noleggio Veicoli</h3>
+            <div class="portfolio-card">
+                <div class="portfolio-header">
+                    <i class="fas fa-car"></i>
+                    <h3>Noleggio Veicoli</h3>
                 </div>
-                <img src="/img/Gestionale-veicoli.png" alt="Noleggio Veicoli"
-                    class="portfolio-img rounded-lg mb-5 shadow-lg project-img ring-2 ring-indigo-500/30 transition hover:ring-indigo-400 object-cover w-full aspect-[16/9] "
-                    data-lightbox="portfolio">
-                <div class="flex flex-wrap gap-2 justify-center mb-3">
-                    <span class="portfolio-tag bg-gradient-to-r from-red-500 to-orange-400">Java</span>
-                    <span class="portfolio-tag bg-gradient-to-r from-blue-500 to-indigo-500">SQL</span>
+                <img src="/img/Gestionale-veicoli.png" alt="Noleggio Veicoli" class="portfolio-img" />
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag java">Java</span>
+                    <span class="portfolio-tag sql">SQL</span>
                 </div>
-                <p class="text-gray-200 text-base mb-5 leading-relaxed">
-                    Gestionale desktop per autonoleggio, sviluppato in Java con database SQL: anagrafiche, prenotazioni,
-                    storico
-                    veicoli.
-                </p>
-                <div class="flex gap-3">
-                    <a href="https://github.com/SalvatoreC94/noleggio-veicoli" target="_blank"
-                        class="portfolio-btn bg-indigo-600 hover:bg-indigo-700">Vai al progetto</a>
+                <p>Gestionale desktop per autonoleggio, sviluppato in Java con database SQL.</p>
+                <div class="portfolio-actions">
+                    <a href="https://github.com/SalvatoreC94/noleggio-veicoli" target="_blank" class="portfolio-btn">Vai
+                        al progetto</a>
                 </div>
             </div>
-
-
         </div>
     </section>
 
-
-
-    <!-- Tecnologie Utilizzate -->
-    <section class="py-20 max-w-6xl mx-auto text-center px-4">
-        <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Tecnologie Utilizzate
-        </h2>
-        <p class="text-gray-400 mt-3 text-lg">
-            Ecco le principali tecnologie che utilizzo per sviluppare siti web moderni e performanti.
+    <!-- Tecnologie -->
+    <section class="tech-section">
+        <h2>Tecnologie Utilizzate</h2>
+        <p class="tech-desc">Ecco le principali tecnologie che utilizzo per sviluppare siti web moderni e performanti.
         </p>
-        <div
-            class="mt-12 grid grid-cols-3 gap-4 justify-items-center md:flex md:flex-wrap md:justify-center md:gap-8 px-4">
-            <div class="techicon-tooltip group">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-                    class="w-16 techicon" />
+        <div class="tech-grid">
+            <div class="techicon-tooltip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
                 <span class="techicon-label">HTML5</span>
             </div>
-            <div class="techicon-tooltip group">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
-                    class="w-16 techicon" />
+            <div class="techicon-tooltip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
                 <span class="techicon-label">CSS3</span>
             </div>
-            <div class="techicon-tooltip group">
+            <div class="techicon-tooltip">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                    alt="Bootstrap" class="w-16 techicon" />
+                    alt="Bootstrap" />
                 <span class="techicon-label">Bootstrap</span>
             </div>
-            <div class="techicon-tooltip group">
-                <!-- Icona Tailwind ufficiale SVG -->
+            <div class="techicon-tooltip">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                    alt="Tailwind CSS" class="w-16 techicon" />
+                    alt="Tailwind CSS" />
                 <span class="techicon-label">Tailwind CSS</span>
             </div>
-            <div class="techicon-tooltip group">
+            <div class="techicon-tooltip">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript" class="w-16 techicon" />
+                    alt="JavaScript" />
                 <span class="techicon-label">JavaScript</span>
             </div>
-            <div class="techicon-tooltip group">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-                    class="w-16 techicon" />
+            <div class="techicon-tooltip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
                 <span class="techicon-label">React</span>
             </div>
-            <div class="techicon-tooltip group">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"
-                    class="w-16 techicon" />
+            <div class="techicon-tooltip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" />
                 <span class="techicon-label">Vue.js</span>
             </div>
-            <div class="techicon-tooltip group">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
-                    class="w-16 techicon" />
+            <div class="techicon-tooltip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
                 <span class="techicon-label">PHP</span>
             </div>
-            <div class="techicon-tooltip group">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
-                    class="w-16 techicon" />
+            <div class="techicon-tooltip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                    alt="Laravel" />
                 <span class="techicon-label">Laravel</span>
             </div>
-            <div class="techicon-tooltip group">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
-                    class="w-16 techicon" />
+            <div class="techicon-tooltip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
                 <span class="techicon-label">MySQL</span>
             </div>
-            <div class="techicon-tooltip group">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
-                    class="w-16 techicon" />
+            <div class="techicon-tooltip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
                 <span class="techicon-label">Java</span>
             </div>
         </div>
-
     </section>
 
-
     <!-- Contatti -->
-    <section id="contatti" class="py-20 max-w-6xl mx-auto text-center px-4">
-        <h2 class="text-4xl font-semibold text-white border-b-4 border-blue-500 inline-block pb-2">Contattami</h2>
-        <p class="text-gray-400 mt-3 text-lg max-w-2xl mx-auto mb-10">
-            Hai un progetto? Scrivimi e ti risponderò entro 24 ore!
-        </p>
-        <form action="https://formspree.io/f/xzzvzkep" method="POST"
-            class="max-w-xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-lg flex flex-col gap-6" id="contact-form">
-            <input type="text" name="name" placeholder="Nome" required
-                class="rounded-lg p-3 text-gray-900 bg-gray-50" />
-            <input type="email" name="email" placeholder="Email" required
-                class="rounded-lg p-3 text-gray-900 bg-gray-50" />
-            <textarea name="message" placeholder="Messaggio" required rows="5"
-                class="rounded-lg p-3 text-gray-900 bg-gray-50"></textarea>
-            <button type="submit"
-                class="bg-yellow-400 text-gray-900 py-3 text-lg rounded-lg font-bold hover:bg-yellow-500 transition">
-                Invia Messaggio
-            </button>
-            <p id="form-status" class="mt-2 text-center hidden"></p>
+    <section id="contatti" class="contact-section">
+        <h2>Contattami</h2>
+        <p class="contact-desc">Hai un progetto? Scrivimi e ti risponderò entro 24 ore!</p>
+        <form action="https://formspree.io/f/xzzvzkep" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Nome" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Messaggio" required rows="5"></textarea>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Invia Messaggio</button>
+            <p id="form-status" class="form-status"></p>
         </form>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-4 bg-gray-950 text-gray-400 text-lg px-4">
-        <div class="flex justify-center gap-4 mb-2">
-            <a href="https://www.linkedin.com/in/salvatore-cozzolino" target="_blank" rel="noopener"
-                aria-label="LinkedIn" class="text-gray-400 hover:text-blue-500 text-2xl transition"><i
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/salvatore-cozzolino" target="_blank" aria-label="LinkedIn"><i
                     class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/SalvatoreC94" target="_blank" rel="noopener" aria-label="GitHub"
-                class="text-gray-400 hover:text-white text-2xl transition"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/salvatorecozzolino.dev" target="_blank" rel="noopener"
-                aria-label="Instagram" class="text-gray-400 hover:text-pink-500 text-2xl transition"><i
+            <a href="https://github.com/SalvatoreC94" target="_blank" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/salvatorecozzolino.dev" target="_blank" aria-label="Instagram"><i
                     class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/393517526552" target="_blank" rel="noopener" aria-label="WhatsApp"
-                class="text-gray-400 hover:text-green-500 text-2xl transition"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/393517526552" target="_blank" aria-label="WhatsApp"><i
+                    class="fab fa-whatsapp"></i></a>
         </div>
         <p>&copy; 2024 Salvatore Cozzolino | Web Developer</p>
     </footer>
-
+    
 </body>
 
 </html>
