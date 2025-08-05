@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Navbar con hamburger -->
     <nav class="navbar">
         <div class="nav-content">
             <div class="brand">Salvatore Cozzolino</div>
@@ -36,6 +36,14 @@
                 <a href="#portfolio">Progetti</a>
                 <a href="#contatti">Contatti</a>
             </div>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Apri menu">
+                <span>&#9776;</span>
+            </button>
+        </div>
+        <div class="mobile-menu hidden" id="mobile-menu">
+            <a href="#chi-sono">Chi sono</a>
+            <a href="#portfolio">Progetti</a>
+            <a href="#contatti">Contatti</a>
         </div>
     </nav>
 
@@ -231,13 +239,13 @@
     <section id="contatti" class="contact-section">
         <h2>Contattami</h2>
         <p class="contact-desc">Hai un progetto? Scrivimi e ti risponderò entro 24 ore!</p>
-        <form action="https://formspree.io/f/xzzvzkep" method="POST" class="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/xzzvzkep" method="POST" class="contact-form">
             <input type="text" name="name" placeholder="Nome" required />
             <input type="email" name="email" placeholder="Email" required />
             <textarea name="message" placeholder="Messaggio" required rows="5"></textarea>
             <button type="submit"><i class="fas fa-paper-plane"></i> Invia Messaggio</button>
-            <p id="form-status" class="form-status"></p>
         </form>
+        <p id="form-status" class="form-status"></p>
     </section>
 
     <!-- Footer -->
@@ -254,7 +262,9 @@
         </div>
         <p>&copy; 2024 Salvatore Cozzolino | Web Developer</p>
     </footer>
-    
+
+    <!-- JS -->
+    <script src="script.js"></script>
 </body>
 
 </html>
