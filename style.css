@@ -813,13 +813,13 @@ section {
     max-width: 100%;
     max-height: 120px;
     object-fit: contain;
-    filter: grayscale(100%) brightness(1.2);
-    transition: filter .4s;
+    /* filter: grayscale(100%) brightness(1.2);
+    transition: filter .4s; */
 }
 
-.client-card:hover .client-logo {
+/* .client-card:hover .client-logo {
     filter: grayscale(0%) brightness(1);
-}
+} */
 
 /* ========== TECH SECTION ========== */
 .tech-section {
