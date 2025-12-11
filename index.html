@@ -12,7 +12,7 @@
         crossorigin="anonymous"></script>
     <!-- Google Fonts: Lato per il corpo, Playfair Display per i titoli -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@400;700;900&display=swap"
         rel="stylesheet" />
     <!-- Stili personalizzati -->
     <link rel="stylesheet" href="style.css">
@@ -34,236 +34,535 @@
         <div class="nav-content">
             <div class="brand">Salvatore Cozzolino</div>
             <div class="links">
+                <a href="#servizi">Servizi</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#chi-sono">Chi sono</a>
-                <a href="#portfolio">Progetti</a>
-                <a href="#contatti">Contatti</a>
+                <a href="#contatti" class="nav-cta">Contattami</a>
             </div>
             <button id="menu-toggle" class="menu-toggle" aria-label="Apri menu">
                 <span>&#9776;</span>
             </button>
         </div>
         <div class="mobile-menu hidden" id="mobile-menu">
+            <a href="#servizi">Servizi</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#chi-sono">Chi sono</a>
-            <a href="#portfolio">Progetti</a>
             <a href="#contatti">Contatti</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section Migliorata -->
     <section class="hero-bg">
+        <div class="hero-particles"></div>
         <div class="hero-content">
             <div class="hero-left">
-                <h1>Ciao, sono<br>Salvatore</h1>
-                <p>Web Developer</p>
-                <button onclick="document.getElementById('contatti').scrollIntoView({behavior:'smooth'})">
-                    Contattami
-                </button>
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Disponibile per nuovi progetti
+                </div>
+                <h1 class="hero-title">
+                    Trasformo <span class="text-gradient">idee</span> in<br>
+                    <span class="text-gradient">soluzioni digitali</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Web Developer freelance specializzato in applicazioni web moderne, e-commerce e automazioni digitali.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span>+
+                        <span class="stat-label">Progetti</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span>+
+                        <span class="stat-label">Clienti</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="11">0</span>+
+                        <span class="stat-label">Tecnologie</span>
+                    </div>
+                </div>
+                <div class="hero-cta-group">
+                    <button class="btn-primary" onclick="document.getElementById('contatti').scrollIntoView({behavior:'smooth'})">
+                        <i class="fas fa-paper-plane"></i>
+                        Inizia un progetto
+                    </button>
+                    <button class="btn-secondary" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+                        <i class="fas fa-briefcase"></i>
+                        Vedi i progetti
+                    </button>
+                </div>
             </div>
             <div class="hero-right">
-                <img src="https://avatars.githubusercontent.com/u/163008512?v=4" alt="Salvatore Cozzolino"
-                    class="profile-img" />
+                <div class="profile-wrapper">
+                    <div class="profile-ring"></div>
+                    <img src="https://avatars.githubusercontent.com/u/163008512?v=4" alt="Salvatore Cozzolino"
+                        class="profile-img" />
+                    <div class="profile-badge">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Chi Sono -->
-    <section id="chi-sono" class="about-section">
-        <h2>Chi Sono</h2>
-        <div class="about-content">
-            <p>
-                La mia storia parte lontano dal computer, tra i fornelli di una cucina, dove ho imparato quanto contino
-                passione, attenzione ai dettagli e ascolto delle persone.
-            </p>
-            <p>
-                Ho scoperto che programmare è un po’ come cucinare: serve creatività, metodo e la voglia di migliorarsi
-                ogni giorno. Oggi, da freelance, metto tutto questo in ogni progetto.
-            </p>
-            <p>
-                Quando non scrivo codice, mi rilasso tra libri, viaggi, stampa 3D… e ogni tanto torno ai fornelli.
-            </p>
-            <p>
-                Se vuoi trasformare la tua idea in un progetto che funziona davvero, sono qui per ascoltarti.
-            </p>
+    <!-- Servizi -->
+    <section id="servizi" class="services-section">
+        <div class="section-header">
+            <span class="section-tag">Cosa Offro</span>
+            <h2>Servizi & Specializzazioni</h2>
+            <p class="section-desc">Soluzioni digitali complete per far crescere il tuo business online</p>
         </div>
-    </section>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Sviluppo Web</h3>
+                <p>Applicazioni web moderne e performanti con le tecnologie più recenti: Laravel, Vue.js, React e molto altro.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Single Page Application</li>
+                    <li><i class="fas fa-check"></i> REST API</li>
+                    <li><i class="fas fa-check"></i> Dashboard amministrative</li>
+                </ul>
+            </div>
 
-    <!-- Processo di Lavoro -->
-    <section class="process-section">
-        <h2>Il Mio Processo di Lavoro</h2>
-        <p class="process-desc">Ogni progetto segue un metodo strategico in quattro fasi per garantire risultati di alta
-            qualità.</p>
-        <div class="process-grid">
-            <div class="process-card">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Strategia</h3>
-                <p>Analizzo le esigenze del cliente e definisco una strategia efficace.</p>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>E-commerce</h3>
+                <p>Piattaforme di vendita online complete, sicure e ottimizzate per la conversione.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Cataloghi prodotti</li>
+                    <li><i class="fas fa-check"></i> Pagamenti integrati</li>
+                    <li><i class="fas fa-check"></i> Gestione ordini</li>
+                </ul>
             </div>
-            <div class="process-card">
-                <i class="fas fa-pencil-ruler"></i>
-                <h3>Design</h3>
-                <p>Creo interfacce intuitive e moderne per un'esperienza utente ottimale.</p>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Design Responsive</h3>
+                <p>Interfacce moderne e intuitive, perfettamente funzionanti su tutti i dispositivi.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Mobile-first approach</li>
+                    <li><i class="fas fa-check"></i> UX/UI ottimizzata</li>
+                    <li><i class="fas fa-check"></i> Accessibilità</li>
+                </ul>
             </div>
-            <div class="process-card">
-                <i class="fas fa-code"></i>
-                <h3>Sviluppo</h3>
-                <p>Scrivo codice performante e scalabile per garantire qualità e velocità.</p>
-            </div>
-            <div class="process-card">
-                <i class="fas fa-rocket"></i>
-                <h3>Deploy</h3>
-                <p>Ottimizzo e pubblico il sito, monitorando le performance.</p>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Automazioni</h3>
+                <p>Ottimizza i processi aziendali con soluzioni automatizzate su misura.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Script personalizzati</li>
+                    <li><i class="fas fa-check"></i> Integrazione API</li>
+                    <li><i class="fas fa-check"></i> Workflow automation</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio-section">
-        <h2><i class="fas fa-folder-open"></i> Portfolio</h2>
-        <p class="portfolio-desc">Ecco alcuni progetti che rappresentano il mio stile e le mie competenze.</p>
+        <div class="section-header">
+            <span class="section-tag">I Miei Lavori</span>
+            <h2><i class="fas fa-folder-open"></i> Portfolio</h2>
+            <p class="section-desc">Progetti reali che dimostrano competenza, creatività e attenzione ai dettagli</p>
+        </div>
         <div class="portfolio-grid">
             <!-- DeliveBoo -->
-            <div class="portfolio-card">
-                <div class="portfolio-header">
-                    <i class="fas fa-utensils"></i>
-                    <h3>DeliveBoo</h3>
+            <div class="portfolio-card" data-aos="fade-up">
+                <div class="portfolio-image-wrapper">
+                    <img src="/img/Deliveboo.png" alt="Deliveboo" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-content">
+                            <h4>DeliveBoo</h4>
+                            <p>Piattaforma completa per gestione ristoranti</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="/img/Deliveboo.png" alt="Deliveboo" class="portfolio-img" />
-                <div class="portfolio-tags">
-                    <span class="portfolio-tag laravel">Laravel</span>
-                    <span class="portfolio-tag vue">Vue.js</span>
-                    <span class="portfolio-tag mysql">MySQL</span>
+                <div class="portfolio-content">
+                    <div class="portfolio-header">
+                        <i class="fas fa-utensils"></i>
+                        <h3>DeliveBoo</h3>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag laravel">Laravel</span>
+                        <span class="portfolio-tag vue">Vue.js</span>
+                        <span class="portfolio-tag mysql">MySQL</span>
+                    </div>
+                    <p>App gestionale per ristoranti con ordini online, dashboard amministrativa e interfaccia responsive.</p>
+                    <div class="portfolio-actions">
+                        <a href="https://github.com/SalvatoreC94/DeliveBoo" target="_blank" class="portfolio-btn">
+                            <i class="fab fa-github"></i> Codice
+                        </a>
+                    </div>
                 </div>
-                <p>App gestionale per ristoranti con ordini online, dashboard amministrativa e interfaccia responsive.
-                </p>
-                <div class="portfolio-actions">
-                    <a href="https://github.com/SalvatoreC94/DeliveBoo" target="_blank" class="portfolio-btn">Vai al
-                        progetto</a>
+            </div>
+
+            <!-- MaitardiShop -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-image-wrapper">
+                    <img src="/img/maitardishop.png" alt="MaitardiShop" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-content">
+                            <h4>MaitardiShop</h4>
+                            <p>E-commerce prodotti tipici siciliani</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-header">
+                        <i class="fas fa-store"></i>
+                        <h3>MaitardiShop</h3>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag laravel">Laravel</span>
+                        <span class="portfolio-tag vue">Vue.js</span>
+                        <span class="portfolio-tag mysql">MySQL</span>
+                    </div>
+                    <p>E-commerce per prodotti tipici siciliani con catalogo completo e sistema di ordini online.</p>
+                    <div class="portfolio-actions">
+                        <a href="#" target="_blank" class="portfolio-btn secondary">
+                            <i class="fas fa-lock"></i> Progetto privato
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Piano Editoriale Social -->
-            <div class="portfolio-card">
-                <div class="portfolio-header">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h3>Piano Editoriale Social</h3>
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-image-wrapper">
+                    <img src="img/Piano-editoriale.png" alt="Piano Editoriale Social" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-content">
+                            <h4>Piano Editoriale</h4>
+                            <p>Tool gestione contenuti social</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="img/Piano-editoriale.png" alt="Piano Editoriale Social" class="portfolio-img" />
-                <div class="portfolio-tags">
-                    <span class="portfolio-tag vue">Vue.js</span>
-                    <span class="portfolio-tag tailwind">Tailwind</span>
-                    <span class="portfolio-tag storage">LocalStorage</span>
-                </div>
-                <p>Tool per la pianificazione dei contenuti social con salvataggio locale e filtri avanzati.</p>
-                <div class="portfolio-actions">
-                    <a href="https://github.com/SalvatoreC94/piano-editoriale-social" target="_blank"
-                        class="portfolio-btn">Vai al progetto</a>
+                <div class="portfolio-content">
+                    <div class="portfolio-header">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Piano Editoriale Social</h3>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag vue">Vue.js</span>
+                        <span class="portfolio-tag tailwind">Tailwind</span>
+                        <span class="portfolio-tag storage">LocalStorage</span>
+                    </div>
+                    <p>Tool per la pianificazione dei contenuti social con salvataggio locale e filtri avanzati.</p>
+                    <div class="portfolio-actions">
+                        <a href="https://github.com/SalvatoreC94/piano-editoriale-social" target="_blank"
+                            class="portfolio-btn">
+                            <i class="fab fa-github"></i> Codice
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Noleggio Veicoli -->
-            <div class="portfolio-card">
-                <div class="portfolio-header">
-                    <i class="fas fa-car"></i>
-                    <h3>Noleggio Veicoli</h3>
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="portfolio-image-wrapper">
+                    <img src="/img/Gestionale-veicoli.png" alt="Noleggio Veicoli" class="portfolio-img" />
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-content">
+                            <h4>Noleggio Veicoli</h4>
+                            <p>Gestionale desktop autonoleggio</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="/img/Gestionale-veicoli.png" alt="Noleggio Veicoli" class="portfolio-img" />
-                <div class="portfolio-tags">
-                    <span class="portfolio-tag java">Java</span>
-                    <span class="portfolio-tag sql">SQL</span>
+                <div class="portfolio-content">
+                    <div class="portfolio-header">
+                        <i class="fas fa-car"></i>
+                        <h3>Noleggio Veicoli</h3>
+                    </div>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag java">Java</span>
+                        <span class="portfolio-tag sql">SQL</span>
+                    </div>
+                    <p>Gestionale desktop per autonoleggio, sviluppato in Java con database SQL.</p>
+                    <div class="portfolio-actions">
+                        <a href="https://github.com/SalvatoreC94/noleggio-veicoli" target="_blank" class="portfolio-btn">
+                            <i class="fab fa-github"></i> Codice
+                        </a>
+                    </div>
                 </div>
-                <p>Gestionale desktop per autonoleggio, sviluppato in Java con database SQL.</p>
-                <div class="portfolio-actions">
-                    <a href="https://github.com/SalvatoreC94/noleggio-veicoli" target="_blank" class="portfolio-btn">Vai
-                        al progetto</a>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clienti/Collaborazioni -->
+    <section class="clients-section">
+        <div class="section-header">
+            <span class="section-tag">Fiducia</span>
+            <h2>Hanno scelto di lavorare con me</h2>
+            <p class="section-desc">Aziende e professionisti che hanno affidato i loro progetti digitali</p>
+        </div>
+        <div class="clients-grid">
+            <div class="client-card" data-aos="zoom-in">
+                <img src="/img/logo-maitardi.png" alt="Maitardi - Prodotti Tipici Siciliani" class="client-logo" />
+            </div>
+            <div class="client-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="/img/logo-francesco-pastrichef.png" alt="Schiavone Francesco - Pastry Chef" class="client-logo" />
+            </div>
+            <div class="client-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="/img/logo-cedit.png" alt="Centro Cedit - Centro Diagnosi e Terapia" class="client-logo" />
             </div>
         </div>
     </section>
 
     <!-- Tecnologie -->
     <section class="tech-section">
-        <h2>Tecnologie Utilizzate</h2>
-        <p class="tech-desc">Ecco le principali tecnologie che utilizzo per sviluppare siti web moderni e performanti.
-        </p>
+        <div class="section-header">
+            <span class="section-tag">Stack Tecnologico</span>
+            <h2>Tecnologie & Strumenti</h2>
+            <p class="section-desc">Le tecnologie che utilizzo per creare soluzioni moderne e performanti</p>
+        </div>
         <div class="tech-grid">
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
                 <span class="techicon-label">HTML5</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="50">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
                 <span class="techicon-label">CSS3</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
                     alt="Bootstrap" />
                 <span class="techicon-label">Bootstrap</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="150">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
                     alt="Tailwind CSS" />
                 <span class="techicon-label">Tailwind CSS</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                     alt="JavaScript" />
                 <span class="techicon-label">JavaScript</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="250">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
                 <span class="techicon-label">React</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" />
                 <span class="techicon-label">Vue.js</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="350">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
                 <span class="techicon-label">PHP</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="400">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
                     alt="Laravel" />
                 <span class="techicon-label">Laravel</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="450">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
                 <span class="techicon-label">MySQL</span>
             </div>
-            <div class="techicon-tooltip">
+            <div class="techicon-tooltip" data-aos="fade-up" data-aos-delay="500">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
                 <span class="techicon-label">Java</span>
             </div>
         </div>
     </section>
 
+    <!-- Processo di Lavoro -->
+    <section class="process-section">
+        <div class="section-header">
+            <span class="section-tag">Metodologia</span>
+            <h2>Come Lavoro</h2>
+            <p class="section-desc">Un processo strategico in quattro fasi per garantire risultati di alta qualità</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-card" data-aos="fade-right">
+                <div class="process-number">01</div>
+                <i class="fas fa-lightbulb"></i>
+                <h3>Strategia</h3>
+                <p>Analizzo le esigenze del cliente e definisco una strategia efficace per raggiungere gli obiettivi.</p>
+            </div>
+            <div class="process-card" data-aos="fade-right" data-aos-delay="100">
+                <div class="process-number">02</div>
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>Design</h3>
+                <p>Creo interfacce intuitive e moderne per garantire un'esperienza utente ottimale.</p>
+            </div>
+            <div class="process-card" data-aos="fade-right" data-aos-delay="200">
+                <div class="process-number">03</div>
+                <i class="fas fa-code"></i>
+                <h3>Sviluppo</h3>
+                <p>Scrivo codice pulito, performante e scalabile seguendo le best practices del settore.</p>
+            </div>
+            <div class="process-card" data-aos="fade-right" data-aos-delay="300">
+                <div class="process-number">04</div>
+                <i class="fas fa-rocket"></i>
+                <h3>Deploy</h3>
+                <p>Pubblico il progetto, ottimizzo le performance e fornisco supporto continuo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi Sono -->
+    <section id="chi-sono" class="about-section">
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right">
+                <div class="about-image-wrapper">
+                    <img src="https://avatars.githubusercontent.com/u/163008512?v=4" alt="Salvatore Cozzolino" />
+                    <div class="about-decoration"></div>
+                </div>
+            </div>
+            <div class="about-content" data-aos="fade-left">
+                <span class="section-tag">La Mia Storia</span>
+                <h2>Chi Sono</h2>
+                <div class="about-text">
+                    <p>
+                        La mia storia parte lontano dal computer, tra i fornelli di una cucina, dove ho imparato quanto contino
+                        <strong>passione, attenzione ai dettagli e ascolto delle persone</strong>.
+                    </p>
+                    <p>
+                        Ho scoperto che programmare è un po' come cucinare: serve <strong>creatività, metodo e la voglia di migliorarsi
+                        ogni giorno</strong>. Oggi, da freelance, metto tutto questo in ogni progetto.
+                    </p>
+                    <p>
+                        Quando non scrivo codice, mi rilasso tra <strong>libri, viaggi, stampa 3D</strong>… e ogni tanto torno ai fornelli.
+                    </p>
+                    <p class="about-cta-text">
+                        Se vuoi trasformare la tua idea in un <strong>progetto che funziona davvero</strong>, sono qui per ascoltarti.
+                    </p>
+                </div>
+                <button class="btn-primary" onclick="document.getElementById('contatti').scrollIntoView({behavior:'smooth'})">
+                    <i class="fas fa-comments"></i>
+                    Parliamone
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Contatti -->
     <section id="contatti" class="contact-section">
-        <h2>Contattami</h2>
-        <p class="contact-desc">Hai un progetto? Scrivimi e ti risponderò entro 24 ore!</p>
-        <form id="contact-form" action="https://formspree.io/f/xzzvzkep" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Nome" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="message" placeholder="Messaggio" required rows="5"></textarea>
-            <button type="submit"><i class="fas fa-paper-plane"></i> Invia Messaggio</button>
-        </form>
+        <div class="section-header">
+            <span class="section-tag">Get In Touch</span>
+            <h2>Hai un progetto in mente?</h2>
+            <p class="section-desc">Raccontami la tua idea e ti risponderò entro 24 ore!</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right">
+                <h3>Contattami direttamente</h3>
+                <div class="contact-methods">
+                    <a href="mailto:salvatorecozzolino.dev@gmail.com" class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="method-label">Email</span>
+                            <span class="method-value">salvatorecozzolino.dev@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/393517526552" target="_blank" class="contact-method">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <span class="method-label">WhatsApp</span>
+                            <span class="method-value">+39 351 752 6552</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/salvatore-cozzolino" target="_blank" class="contact-method">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <span class="method-label">LinkedIn</span>
+                            <span class="method-value">salvatore-cozzolino</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="availability-badge">
+                    <span class="status-dot-large"></span>
+                    <div>
+                        <strong>Disponibile per nuovi progetti</strong>
+                        <p>Risposta garantita entro 24 ore</p>
+                    </div>
+                </div>
+            </div>
+            <form id="contact-form" action="https://formspree.io/f/xzzvzkep" method="POST" class="contact-form" data-aos="fade-left">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Il tuo nome" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tua@email.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="message" placeholder="Raccontami del tuo progetto..." required rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">
+                    <i class="fas fa-paper-plane"></i>
+                    Invia Messaggio
+                </button>
+            </form>
+        </div>
         <p id="form-status" class="form-status"></p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-social">
-            <a href="https://www.linkedin.com/in/salvatore-cozzolino" target="_blank" aria-label="LinkedIn"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/SalvatoreC94" target="_blank" aria-label="GitHub"><i
-                    class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/salvatorecozzolino.dev" target="_blank" aria-label="Instagram"><i
-                    class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/393517526552" target="_blank" aria-label="WhatsApp"><i
-                    class="fab fa-whatsapp"></i></a>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Salvatore Cozzolino</h3>
+                <p>Web Developer specializzato in soluzioni digitali moderne e performanti.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Link Rapidi</h4>
+                <a href="#servizi">Servizi</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#chi-sono">Chi sono</a>
+                <a href="#contatti">Contatti</a>
+            </div>
+            <div class="footer-social-section">
+                <h4>Seguimi</h4>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/salvatore-cozzolino" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/SalvatoreC94" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/salvatorecozzolino.dev" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/393517526552" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2024 Salvatore Cozzolino | Web Developer</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Salvatore Cozzolino | Web Developer</p>
+            <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+        </div>
     </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+        <span class="sticky-cta-text">
+            <i class="fas fa-briefcase"></i>
+            Disponibile per nuovi progetti
+        </span>
+        <button onclick="document.getElementById('contatti').scrollIntoView({behavior:'smooth'})">
+            Contattami
+        </button>
+    </div>
 
     <!-- JS -->
     <script src="script.js"></script>
