@@ -23,110 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ========== ANIMATED COUNTER ==========
-    const animateCounter = (element) => {
-        const target = parseInt(element.getAttribute('data-target'));
-        const duration = 2000; // 2 secondi
-        const step = target / (duration / 16); // 60 FPS
-        let current = 0;
-
-        const updateCounter = () => {
-            current += step;
-            if (current < target) {
-                element.textContent = Math.floor(current);
-                requestAnimationFrame(updateCounter);
-            } else {
-                element.textContent = target;
-            }
-        };
-
-        updateCounter();
-    };
-
-    // Intersection Observer per counter animati
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                if (!counter.classList.contains('counted')) {
-                    animateCounter(counter);
-                    counter.classList.add('counted');
-                }
-            }
-        });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.stat-number').forEach(counter => {
-        counterObserver.observe(counter);
-    });
-
-    // ========== SCROLL ANIMATIONS ==========
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-
-    const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Applica animazioni agli elementi con data-aos
-    document.querySelectorAll('[data-aos]').forEach(el => {
-        el.style.opacity = '0';
-        const animation = el.getAttribute('data-aos');
-
-        if (animation.includes('fade-up')) {
-            el.style.transform = 'translateY(30px)';
-        } else if (animation.includes('fade-right')) {
-            el.style.transform = 'translateX(-30px)';
-        } else if (animation.includes('fade-left')) {
-            el.style.transform = 'translateX(30px)';
-        } else if (animation.includes('zoom-in')) {
-            el.style.transform = 'scale(0.9)';
-        }
-
-        el.style.transition = 'all 0.6s ease-out';
-
-        const delay = el.getAttribute('data-aos-delay');
-        if (delay) {
-            el.style.transitionDelay = `${delay}ms`;
-        }
-
-        scrollObserver.observe(el);
-    });
-
-    // ========== STICKY CTA ==========
-    const stickyCta = document.getElementById('sticky-cta');
-
-    if (stickyCta) {
-        // Nascondi sticky CTA quando si scorre verso l'alto
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll <= 100) {
-                stickyCta.style.transform = 'translateX(400px)';
-                stickyCta.style.opacity = '0';
-            } else if (currentScroll < lastScroll) {
-                // Scroll up
-                stickyCta.style.transform = 'translateX(400px)';
-                stickyCta.style.opacity = '0';
-            } else {
-                // Scroll down
-                stickyCta.style.transform = 'translateX(0)';
-                stickyCta.style.opacity = '1';
-            }
-
-            lastScroll = currentScroll;
-        });
-    }
-
     // ========== FORMSPREE AJAX ==========
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
@@ -206,85 +102,39 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ========== NAVBAR BACKGROUND ON SCROLL ==========
-    const navbar = document.querySelector('.navbar');
+    // ========== STICKY CTA VISIBILITY ==========
+    const stickyCta = document.getElementById('sticky-cta');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(24, 24, 27, 0.98)';
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
-        } else {
-            navbar.style.background = 'rgba(24, 24, 27, 0.95)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
-        }
-    });
+        const scrolled = window.pageYOffset;
 
-    // ========== PORTFOLIO IMAGE LAZY LOADING ==========
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                    }
-                    observer.unobserve(img);
-                }
-            });
-        });
-
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
-    }
-
-    // ========== PREVENT SCROLL INDICATOR OVERLAP ==========
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    if (scrollIndicator) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
+        // Nascondi scroll indicator dopo 200px
+        if (scrollIndicator) {
+            if (scrolled > 200) {
                 scrollIndicator.style.opacity = '0';
                 scrollIndicator.style.pointerEvents = 'none';
             } else {
                 scrollIndicator.style.opacity = '1';
                 scrollIndicator.style.pointerEvents = 'auto';
             }
-        });
-    }
+        }
 
-    // ========== EASTER EGG: KONAMI CODE ==========
-    let konamiCode = [];
-    const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-
-    document.addEventListener('keydown', (e) => {
-        konamiCode.push(e.key);
-        konamiCode = konamiCode.slice(-konamiSequence.length);
-
-        if (konamiCode.join('') === konamiSequence.join('')) {
-            // Easter egg attivato!
-            document.body.style.animation = 'rainbow 2s infinite';
-
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes rainbow {
-                    0% { filter: hue-rotate(0deg); }
-                    100% { filter: hue-rotate(360deg); }
-                }
-            `;
-            document.head.appendChild(style);
-
-            setTimeout(() => {
-                document.body.style.animation = '';
-                style.remove();
-            }, 5000);
-
-            konamiCode = [];
+        // Mostra sticky CTA dopo 300px
+        if (stickyCta) {
+            if (scrolled > 300) {
+                stickyCta.style.opacity = '1';
+                stickyCta.style.transform = 'translateY(0)';
+            } else {
+                stickyCta.style.opacity = '0';
+                stickyCta.style.transform = 'translateY(100px)';
+            }
         }
     });
 
-    // ========== CONSOLE MESSAGE ==========
-    console.log('%c👨‍💻 Ciao developer!', 'color: #FFD600; font-size: 24px; font-weight: bold;');
-    console.log('%cSe stai guardando il codice, perché non mi scrivi? 😊', 'color: #A1A1AA; font-size: 14px;');
-    console.log('%c📧 salvatorecozzolino.dev@gmail.com', 'color: #FFD600; font-size: 14px; font-weight: bold;');
+    // Inizializza stato sticky CTA
+    if (stickyCta) {
+        stickyCta.style.opacity = '0';
+        stickyCta.style.transform = 'translateY(100px)';
+    }
 });
